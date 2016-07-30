@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>响应式</title>
+    <title>栅格化系统</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,15 +19,33 @@
 </head>
 <body>
 
-<!--超小屏幕可见-->
-<div  class="visible-xs-block bg-primary">
-    这里是要显示的内容1
-</div>
-<!--超小屏幕隐藏-->
-<div  class="hidden-xs bg-primary">
-    这里是要隐藏的内容2
+<div class="container">
+    <div class="row">
+        <div class="bg-primary col-sm-9">A</div>
+        <div class="bg-success col-sm-2">B</div>
+        <div class="bg-info col-sm-2">C</div>
+    </div>
 </div>
 
+<div class="container bg-primary">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+        <div class="col-xs-6">.col-xs-6</div>
+        <div class="col-xs-6">.col-xs-6</div>
+    </div>
+</div>
 <!--jQuery库必须加载，而且必须在bootstrap.min.js之前-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
